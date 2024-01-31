@@ -1,0 +1,770 @@
+@import 'https://fonts.googleapis.com/css?family=Montserrat:300, 400,700&display=swap';
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color:black;
+}
+html {
+    font-size: 10px;
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+}
+a {
+    text-decoration: none;
+}
+.container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+p {
+    color: rgb(255, 255, 255);
+    font-size: 1.4rem;
+    margin-top: 5px;
+    line-height: 2.5rem;
+    font-weight: 300;
+    letter-spacing: 0.05rem;
+}
+.section-title {
+    font-size: 4rem;
+    font-weight: 300;
+    color: dodgerblue;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    text-align: center;
+}
+.contactsection-title{
+    font-size: 4rem;
+    font-weight: 300;
+    color: dodgerblue;
+    margin-bottom: 100px;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    text-align: center;
+}
+.section-title span {
+    color: dodgerblue;
+}
+.cta {
+    display: inline-block;
+    padding: 10px 30px;
+    color: white;
+    background-color: transparent;
+    border: 2px solid dodgerblue;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    margin-top: 30px;
+    transition: 0.3s ease;
+    transition-property: background-color, color;
+}
+.cta:hover {
+    color: white;
+    background-color: dodgerblue;
+}
+.brand h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: white;
+}
+.brand h1 span {
+    color: dodgerblue;
+}
+/* Header section */
+#header {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: auto;
+}
+#header .header {
+
+    min-height: 8vh;
+    background-color: rgba(0, 0, 0, 0.24);
+    transition: 0.3s ease background-color;
+}
+#header .nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    max-width: 1300px;
+    padding: 0 10px;
+}
+#header .nav-list ul {
+    list-style: none;
+    position: absolute;
+    background-color: rgb(31, 30, 30);
+    width: 100vw;
+    height: 100vh;
+    left: 100%;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    overflow-x: hidden;
+    transition: 0.5s ease left;
+}
+#header .nav-list ul.active {
+    left: 0%;
+}
+#header .nav-list ul a {
+    font-size: 2.5rem;
+    font-weight: 500;
+    letter-spacing: 0.2rem;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    padding: 20px;
+    display: block;
+}
+#header .nav-list ul a::after {
+
+    content: attr(data-after);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    color: rgba(240, 248, 255, 0.021);
+    font-size: 13rem;
+    letter-spacing: 50px;
+    z-index: -1;
+    transition: 0.3s ease letter-spacing;
+}
+#header .nav-list ul li:hover a::after {
+    transform: translate(-50%, -50%) scale(1);
+    letter-spacing: initial;
+}
+#header .nav-list ul li:hover a {
+    color: dodgerblue;
+}
+#header .hamburger {
+    height: 60px;
+    width: 60px;
+    display: inline-block;
+    border: 3px solid white;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    cursor: pointer;
+    transform: scale(0.8);
+    margin-right: 20px;
+}
+#header .hamburger:after {
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    border: 3px solid white;
+    animation: hamburger_puls 1s ease infinite;
+}
+#header .hamburger .bar {
+
+    height: 2px;
+    width: 30px;
+    position: relative;
+    background-color: white;
+    z-index: -1;
+}
+#header .hamburger .bar::after,
+#header .hamburger .bar::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    background-color: white;
+    transition: 0.3s ease;
+    transition-property: top, bottom;
+}
+#header .hamburger .bar::after {
+    top: 8px;
+}
+#header .hamburger .bar::before {
+    bottom: 8px;
+}
+#header .hamburger.active .bar::before {
+    bottom: 0;
+}
+#header .hamburger.active .bar::after {
+    top: 0;
+}
+/* End Header section */
+/* main Section */
+#main {
+    background-image: url("assets/images/VIn.png");
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: 1;
+}
+#main::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+#main .main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 50px;
+    justify-content: flex-start;
+}
+#main h1 {
+    display: block;
+    width: fit-content;
+    font-size: 4rem;
+    position: relative;
+    color: transparent;
+    animation: text_reveal 0.5s ease forwards;
+    animation-delay: 1s;
+}
+#main h1:nth-child(1) {
+    animation-delay: 1s;
+}
+#main h1:nth-child(2) {
+    animation-delay: 2s;
+}
+#main h1:nth-child(3) {
+    animation: text_reveal_name 0.5s ease forwards;
+    animation-delay: 3s;
+}
+#main h1 span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: dodgerblue;
+    animation: text_reveal_box 1s ease;
+    animation-delay: 0.5s;
+}
+#main h1:nth-child(1) span {
+
+    animation-delay: 0.5s;
+}
+#main h1:nth-child(2) span {
+    animation-delay: 1.5s;
+}
+#main h1:nth-child(3) span {
+    animation-delay: 2.5s;
+}
+/* End main Section */
+/* Projects section */
+#projects .projects {
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+#projects .projects-header h1 {
+    margin-bottom: 50px;
+}
+  
+.project-section {
+    text-align: center;
+    padding: 50px 0;
+}
+  
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+  
+.project {
+    width: 25%;
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+    box-shadow: 0px 0px 18px 0 dodgerblue;
+    transition: 0.3s ease box-shadow;
+    border-radius: 5px;
+}
+
+.project:hover{
+    box-shadow: 0px 0px 5px 0 rgb(255, 255, 255);
+}
+  
+.project img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+  
+@media only screen and (max-width: 768px) {
+    .project-container {
+      flex-direction: column;
+      width: 100%;
+}
+  
+.project {
+      width: 100%;
+    }
+}
+  
+@media only screen and (max-width: 480px) {
+    .project img {
+      width: 50%;
+    }
+}
+
+/* End Projects section */
+/* About Section */
+#about .about {
+    flex-direction: column-reverse;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 20px;
+}
+#about .col-left {
+    width: 250px;
+    height: 360px;
+}
+#about .col-right {
+    width: 100%;
+}
+#about .col-right h2 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    letter-spacing: 0.2rem;
+    margin-bottom: 10px;
+}
+#about .col-right p {
+    margin-bottom: 20px;
+}
+#about .col-right .cta {
+    color: rgb(255, 255, 255);
+    margin-bottom: 50px;
+    padding: 10px 20px;
+    font-size: 2rem;
+}
+#about .col-left .about-img {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    border: 10px solid white;
+}
+#about .col-left .about-img::after {
+    content: '';
+    position: absolute;
+    left: -33px;
+    top: 19px;
+    height: 98%;
+    width: 98%;
+    border: 7px solid dodgerblue;
+    z-index: -1;
+}
+/* End About Section */
+/* contact Section */
+#contact .contact {
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 90%;
+}
+/*End contact Section */
+/* Footer */
+#footer {
+    background-color: black;
+}
+#footer .footer {
+    min-height: 200px;
+    flex-direction: column;
+    padding-top: 50px;
+    padding-bottom: 10px;
+}
+#footer h2 {
+    color: white;
+    font-weight: 500;
+    font-size: 1.8rem;
+    letter-spacing: 0.1rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#footer .social-icon {
+    display: flex;
+    margin-bottom: 30px;
+}
+#footer .social-item {
+    height: 50px;
+    width: 50px;
+    margin: 0 5px;
+}
+#footer .social-item img {
+    filter: grayscale(1);
+    transition: 0.3s ease filter;
+}
+#footer .social-item:hover img {
+    filter: grayscale(0);
+}
+#footer p {
+    color: white;
+    font-size: 1.3rem;
+}
+/* End Footer */
+/* Keyframes */
+@keyframes hamburger_puls {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+}
+    100% {
+        opacity: 0;
+        transform: scale(1.4);
+}
+}
+@keyframes text_reveal_box {
+    50% {
+        width: 100%;
+        left: 0;
+}
+    100% {
+        width: 0;
+        left: 100%;
+}
+}
+@keyframes text_reveal {
+
+    100% {
+        color: white;
+}
+}
+@keyframes text_reveal_name {
+    100% {
+        color: dodgerblue;
+        font-weight: 500;
+}
+}
+/* End Keyframes */
+/* Media Query For Tablet */
+@media only screen and (min-width: 768px) {
+    .cta {
+        font-size: 2.5rem;
+        padding: 20px 60px;
+}
+h1.section-title {
+    font-size: 6rem;
+}
+/* Main */
+#main h1 {
+    font-size: 7rem;
+}
+/* End Main */
+/* Project */
+#projects .project-item {
+    flex-direction: row;
+}
+#projects .project-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+#projects .project-item {
+
+    height: 400px;
+    margin: 0;
+    width: 100%;
+    border-radius: 0;
+}
+#projects .all-projects .project-info {
+    height: 100%;
+}
+#projects .all-projects .project-img {
+    height: 100%;
+}
+/* End Project */
+/* About */
+#about .about {
+    flex-direction: row;
+}
+#about .col-left {
+    width: 600px;
+    height: 400px;
+    padding-left: 60px;
+}
+#about .about .col-left .about-img::after {
+    left: -45px;
+    top: 34px;
+    height: 98%;
+    width: 98%;
+    border: 10px solid dodgerblue;
+}
+#about .col-right {
+    text-align: left;
+    padding: 30px;
+}
+#about .col-right h1 {
+    text-align: left;
+}
+/* End About */
+/* contact */
+#contact .contact {
+    flex-direction: column;
+    padding: 100px 0;
+    align-items: center;
+
+    justify-content: center;
+    min-width: 20vh;
+}
+#contact .contact-items {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 0;
+}
+#contact .contact-item {
+    width: 30%;
+    margin: 0;
+    flex-direction: row;
+}
+#contact .contact-item .icon {
+    height: 100px;
+    width: 100px;
+}
+#contact .contact-item .icon img {
+    object-fit: contain;
+}
+#contact .contact-item .contact-info {
+    width: 100%;
+    text-align: left;
+    padding-left: 20px;
+}
+/* End contact */
+}
+/* End Media Query For Tablet */
+/* Media Query For Desktop */
+@media only screen and (min-width: 1200px) {
+/* header */
+#header .hamburger {
+    display: none;
+}
+#header .nav-list ul {
+    position: initial;
+    display: block;
+    height: auto;
+    width: fit-content;
+    background-color: transparent;
+
+}
+#header .nav-list ul li {
+    display: inline-block;
+}
+#header .nav-list ul li a {
+    font-size: 1.8rem;
+}
+#header .nav-list ul a:after {
+    display: none;
+}
+/* End header */
+}
+
+.helloworld{
+	width: 100%;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 30px 8%;
+}
+.helloworld .row{
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	max-width: 1100px;
+}
+.row section.col{
+	display: flex;
+	flex-direction: column;
+}
+.row section.left{
+	flex-basis: 35%;
+	min-width: 320px;
+	margin-right: 60px;
+}
+.row section.right{
+	flex-basis: 60%;
+}
+section.left .contactTitle h2{
+	position: relative;
+	font-size: 28px;
+	color: #ddd;
+	display: inline-block;
+	margin-bottom: 25px;
+}
+section.left .contactTitle h2::before{
+	content: '';
+	position: absolute;
+	width: 50%;
+	height: 1px;
+	background-color: #888;
+	top: 120%;
+	left: 0;
+}
+section.left .contactTitle h2::after{
+	content: '';
+	position: absolute;
+	width: 25%;
+	height: 3px;
+	background-color: dodgerblue;
+	top: calc(120% - 1px);
+	left: 0;
+}
+section.left .contactTitle p{
+	font-size: 17px;
+	color: #ccc;
+	letter-spacing: 1px;
+	line-height: 1.2;
+	padding-bottom: 22px;
+}
+section.left .contactInfo{
+	margin-bottom: 16px;
+}
+.contactInfo .iconGroup{
+	display: flex;
+	align-items: center;
+	margin: 25px 0px;
+}
+.iconGroup .icon{
+	width: 45px;
+	height: 45px;
+	border: 2px solid dodgerblue;
+	border-radius: 50%;
+	margin-right: 20px;
+	position: relative;
+}
+.iconGroup .icon i{
+	font-size: 20px;
+	color: #ddd;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.iconGroup .details span{
+	display: block;
+	color: #888;
+	font-size: 18px;
+}
+.iconGroup .details span:nth-child(1){
+	text-transform: uppercase;
+	color: #ccc;
+}
+
+/* Code for the right section (column) */
+
+.row section.right .messageForm{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	padding-top: 30px;
+}
+.row section.right .inputGroup{
+	margin: 18px 0px;
+	position: relative;
+}
+.messageForm .halfWidth{
+	flex-basis: 48%;
+}
+.messageForm .fullWidth{
+	flex-basis: 100%;
+}
+.messageForm input, .messageForm textarea{
+	width: 100%;
+	font-size: 18px;
+	padding: 2px 0px;
+	background-color: #2e2e2e;
+	color: #ddd;
+	border: none;
+	border-bottom: 2px solid #666;
+	outline: none;
+}
+.messageForm textarea{
+	resize: none;
+	height: 220px;
+	display: block;
+}
+textarea::-webkit-scrollbar{
+	width: 5px;
+}
+textarea::-webkit-scrollbar-track{
+	background-color: #1e1e1e;
+	border-radius: 15px;
+}
+textarea::-webkit-scrollbar-thumb{
+	background-color: dodgerblue;
+	border-radius: 15px;
+}
+.inputGroup label{
+	position: absolute;
+	left: 0;
+	bottom: 4px;
+	color: #888;
+	font-size: 18px;
+	transition: 0.4s;
+	pointer-events: none;
+}
+.inputGroup:nth-child(4) label{
+	top: 2px;
+}
+.inputGroup input:focus ~ label, .inputGroup textarea:focus ~ label,
+.inputGroup input:valid ~ label, .inputGroup textarea:valid ~ label
+{
+	transform: translateY(-30px);
+	font-size: 16px;
+}
+.inputGroup button{
+	padding: 8px 16px;
+	font-size: 18px;
+	background-color: dodgerblue;
+	color: #ddd;
+	border: 1px solid transparent;
+	border-radius: 25px;
+	outline: none;
+	cursor: pointer;
+	box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+	transition: 0.4s;
+}
+.inputGroup button:hover{
+	background-color: #2e2e2e;
+	color: dodgerblue;
+	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+	border: 1px solid dodgerblue;
+}
+@media(max-width: 1100px){
+	.messageForm .halfWidth{
+		flex-basis: 100%;
+	}
+}
+@media(max-width: 900px){
+	.helloworld .row{
+		flex-wrap: wrap;
+	}
+	.row section.left, .row section.right{
+		flex-basis: 100%;
+		margin: 0px;
+	}
+}
