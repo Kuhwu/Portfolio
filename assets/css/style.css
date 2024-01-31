@@ -81,7 +81,6 @@ p {
 .brand h1 span {
     color: dodgerblue;
 }
-/* Header section */
 #header {
     position: fixed;
     z-index: 1000;
@@ -209,8 +208,6 @@ p {
 #header .hamburger.active .bar::after {
     top: 0;
 }
-/* End Header section */
-/* main Section */
 #main {
     background-image: url("assets/images/VIn.png");
     background-size: cover;
@@ -272,8 +269,6 @@ p {
 #main h1:nth-child(3) span {
     animation-delay: 2.5s;
 }
-/* End main Section */
-/* Projects section */
 #projects .projects {
     flex-direction: column;
     max-width: 1200px;
@@ -332,8 +327,6 @@ p {
     }
 }
 
-/* End Projects section */
-/* About Section */
 #about .about {
     flex-direction: column-reverse;
     text-align: center;
@@ -379,16 +372,12 @@ p {
     border: 7px solid dodgerblue;
     z-index: -1;
 }
-/* End About Section */
-/* contact Section */
 #contact .contact {
     flex-direction: column;
     max-width: 1200px;
     margin: 0 auto;
     width: 90%;
 }
-/*End contact Section */
-/* Footer */
 #footer {
     background-color: black;
 }
@@ -426,8 +415,6 @@ p {
     color: white;
     font-size: 1.3rem;
 }
-/* End Footer */
-/* Keyframes */
 @keyframes hamburger_puls {
     0% {
         opacity: 1;
@@ -460,8 +447,6 @@ p {
         font-weight: 500;
 }
 }
-/* End Keyframes */
-/* Media Query For Tablet */
 @media only screen and (min-width: 768px) {
     .cta {
         font-size: 2.5rem;
@@ -470,12 +455,9 @@ p {
 h1.section-title {
     font-size: 6rem;
 }
-/* Main */
 #main h1 {
     font-size: 7rem;
 }
-/* End Main */
-/* Project */
 #projects .project-item {
     flex-direction: row;
 }
@@ -495,8 +477,6 @@ h1.section-title {
 #projects .all-projects .project-img {
     height: 100%;
 }
-/* End Project */
-/* About */
 #about .about {
     flex-direction: row;
 }
@@ -519,8 +499,6 @@ h1.section-title {
 #about .col-right h1 {
     text-align: left;
 }
-/* End About */
-/* contact */
 #contact .contact {
     flex-direction: column;
     padding: 100px 0;
@@ -553,12 +531,8 @@ h1.section-title {
     text-align: left;
     padding-left: 20px;
 }
-/* End contact */
 }
-/* End Media Query For Tablet */
-/* Media Query For Desktop */
 @media only screen and (min-width: 1200px) {
-/* header */
 #header .hamburger {
     display: none;
 }
@@ -579,7 +553,6 @@ h1.section-title {
 #header .nav-list ul a:after {
     display: none;
 }
-/* End header */
 }
 
 .helloworld{
@@ -673,9 +646,6 @@ section.left .contactInfo{
 	text-transform: uppercase;
 	color: #ccc;
 }
-
-/* Code for the right section (column) */
-
 .row section.right .messageForm{
 	display: flex;
 	justify-content: space-between;
