@@ -1,4 +1,4 @@
-const navigation = document.querySelector('.header .nav-bar .nav-list .navigation');
+/*const navigation = document.querySelector('.header .nav-bar .nav-list .navigation');
 const mobile_menu = document.querySelector('.header .nav-bar .nav-list ul');
 const menu_item = document.querySelectorAll('.header .nav-bar .nav-list ul li a');
 const header = document.querySelector('.header.container');
@@ -36,4 +36,4 @@ const observer = new IntersectionObserver(entries => {
 
 courses.forEach(course => {
   observer.observe(course)
-})
+})*/

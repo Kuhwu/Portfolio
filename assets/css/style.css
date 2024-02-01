@@ -89,8 +89,7 @@ p {
     width: 100vw;
     height: auto;
 }
-#header .header {
-
+#header .header {   
     min-height: 8vh;
     background-color: rgba(0, 0, 0, 0.24);
     transition: 0.3s ease background-color;
@@ -209,7 +208,7 @@ p {
     top: 0;
 }
 #main {
-    background-image: url("assets/images/VIn.png");
+    background-image: url("/assets/images/VIn");
     background-size: cover;
     background-position: top center;
     position: relative;
@@ -237,7 +236,6 @@ p {
     position: relative;
     color: transparent;
     animation: text_reveal 0.5s ease forwards;
-    animation-delay: 1s;
 }
 #main h1:nth-child(1) {
     animation-delay: 1s;
@@ -317,7 +315,7 @@ p {
 }
   
 .project {
-      width: 100%;
+      width: 90%;
     }
 }
   
