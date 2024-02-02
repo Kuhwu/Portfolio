@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 body{
-    background-color:black;
+    background-color:#081b29;
 }
 html {
     font-size: 10px;
@@ -38,7 +38,7 @@ p {
 .section-title {
     font-size: 4rem;
     font-weight: 300;
-    color: dodgerblue;
+    color: whitesmoke;
     margin-bottom: 15px;
     text-transform: uppercase;
     letter-spacing: 0.2rem;
@@ -47,21 +47,21 @@ p {
 .contactsection-title{
     font-size: 4rem;
     font-weight: 300;
-    color: dodgerblue;
+    color: whitesmoke;
     margin-bottom: 100px;
     text-transform: uppercase;
     letter-spacing: 0.2rem;
     text-align: center;
 }
 .section-title span {
-    color: dodgerblue;
+    color: whitesmoke;
 }
 .cta {
     display: inline-block;
     padding: 10px 30px;
     color: white;
     background-color: transparent;
-    border: 2px solid dodgerblue;
+    border: 2px solid whitesmoke;
     font-size: 2rem;
     text-transform: uppercase;
     letter-spacing: 0.1rem;
@@ -71,7 +71,7 @@ p {
 }
 .cta:hover {
     color: white;
-    background-color: dodgerblue;
+    background-color: whitesmoke;
 }
 .brand h1 {
     font-size: 3rem;
@@ -79,7 +79,7 @@ p {
     color: white;
 }
 .brand h1 span {
-    color: dodgerblue;
+    color: whitesmoke;
 }
 #header {
     position: fixed;
@@ -91,7 +91,7 @@ p {
 }
 #header .header {   
     min-height: 8vh;
-    background-color: rgba(0, 0, 0, 0.24);
+    background-color: #081b29;
     transition: 0.3s ease background-color;
 }
 #header .nav-bar {
@@ -238,13 +238,12 @@ p {
     animation: text_reveal 0.5s ease forwards;
 }
 #main h1:nth-child(1) {
-    animation-delay: 1s;
+    animation-delay: 0s;
 }
 #main h1:nth-child(2) {
     animation-delay: 2s;
 }
 #main h1:nth-child(3) {
-    animation: text_reveal_name 0.5s ease forwards;
     animation-delay: 3s;
 }
 #main h1 span {
@@ -253,7 +252,7 @@ p {
     left: 0;
     height: 100%;
     width: 0;
-    background-color: dodgerblue;
+    background-color: #081b29;
     animation: text_reveal_box 1s ease;
     animation-delay: 0.5s;
 }
@@ -360,16 +359,18 @@ p {
     position: relative;
     border: 10px solid white;
 }
+/*
+Picture Border
 #about .col-left .about-img::after {
     content: '';
     position: absolute;
-    left: -33px;
+    left: -39px;
     top: 19px;
     height: 98%;
     width: 98%;
     border: 7px solid dodgerblue;
-    z-index: -1;
-}
+    z-index: -5;
+}*/
 #contact .contact {
     flex-direction: column;
     max-width: 1200px;
@@ -377,7 +378,7 @@ p {
     width: 90%;
 }
 #footer {
-    background-color: black;
+    background-color: #081b29;
 }
 #footer .footer {
     min-height: 200px;
@@ -441,7 +442,7 @@ p {
 }
 @keyframes text_reveal_name {
     100% {
-        color: dodgerblue;
+        color: whitesmoke;
         font-weight: 500;
 }
 }
@@ -488,7 +489,7 @@ h1.section-title {
     top: 34px;
     height: 98%;
     width: 98%;
-    border: 10px solid dodgerblue;
+    border: 10px solid whitesmoke;
 }
 #about .col-right {
     text-align: left;
@@ -600,7 +601,7 @@ section.left .contactTitle h2::after{
 	position: absolute;
 	width: 25%;
 	height: 3px;
-	background-color: dodgerblue;
+	background-color: whitesmoke;
 	top: calc(120% - 1px);
 	left: 0;
 }
@@ -622,7 +623,7 @@ section.left .contactInfo{
 .iconGroup .icon{
 	width: 45px;
 	height: 45px;
-	border: 2px solid dodgerblue;
+	border: 2px solid whitesmoke;
 	border-radius: 50%;
 	margin-right: 20px;
 	position: relative;
@@ -637,12 +638,12 @@ section.left .contactInfo{
 }
 .iconGroup .details span{
 	display: block;
-	color: #888;
+	color: whitesmoke;
 	font-size: 18px;
 }
 .iconGroup .details span:nth-child(1){
 	text-transform: uppercase;
-	color: #ccc;
+	color: whitesmoke;
 }
 .row section.right .messageForm{
 	display: flex;
@@ -664,7 +665,7 @@ section.left .contactInfo{
 	width: 100%;
 	font-size: 18px;
 	padding: 2px 0px;
-	background-color: #2e2e2e;
+	background-color: transparent;
 	color: #ddd;
 	border: none;
 	border-bottom: 2px solid #666;
@@ -683,7 +684,7 @@ textarea::-webkit-scrollbar-track{
 	border-radius: 15px;
 }
 textarea::-webkit-scrollbar-thumb{
-	background-color: dodgerblue;
+	background-color: whitesmoke;
 	border-radius: 15px;
 }
 .inputGroup label{
