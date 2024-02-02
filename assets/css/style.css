@@ -91,7 +91,7 @@ p {
 }
 #header .header {   
     min-height: 8vh;
-    background-color: #081b29;
+    background-color: transparent;
     transition: 0.3s ease background-color;
 }
 #header .nav-bar {
@@ -150,7 +150,7 @@ p {
     letter-spacing: initial;
 }
 #header .nav-list ul li:hover a {
-    color: dodgerblue;
+    color: transparent;
 }
 #header .hamburger {
     height: 60px;
