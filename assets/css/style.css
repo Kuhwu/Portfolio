@@ -150,7 +150,7 @@ p {
     letter-spacing: initial;
 }
 #header .nav-list ul li:hover a {
-    color: transparent;
+    color: dodgerblue;
 }
 #header .hamburger {
     height: 60px;
@@ -359,8 +359,6 @@ p {
     position: relative;
     border: 10px solid white;
 }
-/*
-Picture Border
 #about .col-left .about-img::after {
     content: '';
     position: absolute;
@@ -370,7 +368,7 @@ Picture Border
     width: 98%;
     border: 7px solid dodgerblue;
     z-index: -5;
-}*/
+}
 #contact .contact {
     flex-direction: column;
     max-width: 1200px;
